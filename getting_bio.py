@@ -15,7 +15,7 @@ def bio():
     driver.maximize_window()
     driver.get(url_oo)
 
-    with open("crd.json", "r") as credentials:
+    with open("credentials.json", "r") as credentials:
         data = json.load(credentials)
 
     email = driver.find_element_by_id("m_login_email")

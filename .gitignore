@@ -4,6 +4,7 @@ output.csv
 output.xlsx
 messenger.py
 waste_of_time_2hour/
+credentials.json
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

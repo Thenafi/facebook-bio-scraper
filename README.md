@@ -14,7 +14,14 @@ For me, the first 300-400 friends were enough 😋
 
 **Usages**
 
-First add your Facebook credentials in the _crds.json_ file.
+First create _credentials.json_ file and add your Facebook Credentials in it like this
+
+```
+{
+"username":  "username",
+"pass":  "password"
+}
+```
 
 Recommended to use virtual environment. You can read [here.](https://dev.to/ngazetungue/python-script-in-virtual-environment-beginners-guide-h6d)
 

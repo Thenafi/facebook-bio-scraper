@@ -12,7 +12,7 @@ from getting_bio import *
 #  Sample.json file is the main output or databse..  where all your data will be stored
 # after running the programe use the
 # updated file and convert it to our needs
-#  if there is no crd.json file create one like this https://f000.backblazeb2.com/file/ShareX2022/ShareX/Code_kCSU7eE5BC.png
+#  if there is no credentials.json file create one like this https://f000.backblazeb2.com/file/ShareX2022/ShareX/Code_kCSU7eE5BC.png
 #  it holds your password and id
 
 
