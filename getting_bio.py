@@ -31,11 +31,6 @@ def bio():
 
     # profile theke bio anar function
 
-    ##########################
-    #  to make the code run faster change these value
-    # example (0,19)/ (10,15)
-    wait = random.randint(20, 40)
-
     def bio_collector(url):
         try:
             driver.get(url)
@@ -48,6 +43,10 @@ def bio():
         except:
             print("Bio Extracting Failed", url)
             bio = None
+        ##########################
+        #  to make the code run faster change these value
+        # example (0,19)/ (10,15)
+        wait = random.randint(5, 10)
         print(f" Waiting for {wait} seconds -----")
         time.sleep(wait)
         return bio

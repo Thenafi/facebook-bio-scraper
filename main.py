@@ -6,7 +6,7 @@ from getting_bio import *
 # This is a slow process bceasue you will get
 # temoporary block by facebook if you collect bio faster
 # but its your wish to make it faster or solwer.
-# to contol it change the timer(range) in getting_bio.py  line37 (wait variable)
+# to contol it change the timer(range) in getting_bio.py a line 49 (wait variable)
 
 
 # output.json file is the main output or databse..  where all your data will be stored
