@@ -6,14 +6,14 @@ from getting_bio import *
 # This is a slow process bceasue you will get
 # temoporary block by facebook if you collect bio faster
 # but its your wish to make it faster or solwer.
-# to contol it change the timer(range) in getting_bio  line37 (wait variable)
+# to contol it change the timer(range) in getting_bio.py  line37 (wait variable)
 
 
-#  output.json file is the main output or databse..  where all your data will be stored
+# output.json file is the main output or databse..  where all your data will be stored
 # after running the programe use the
 # updated file and convert it to our needs
-#  if there is no credentials.json file create one like this https://f000.backblazeb2.com/file/ShareX2022/ShareX/Code_kCSU7eE5BC.png
-#  it holds your password and id
+# if there is no credentials.json file create one like this https://f000.backblazeb2.com/file/ShareX2022/ShareX/Code_kCSU7eE5BC.png
+# it holds your password and id
 
 
 # checking if you have the output.json file.. if not  import profile will run and create the json file

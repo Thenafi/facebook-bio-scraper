@@ -41,7 +41,7 @@ Thats it 🥰 Watch and enjoy the scraping.
 
 **Instructions to Scrape Faster**
 
-Change the random integer variable at line 37 of getting_bio.py file.
+Change the random integer range at line 37 of getting_bio.py file.
 
     wait  =  random.randint(20,  40)
 
