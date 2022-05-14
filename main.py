@@ -1,5 +1,6 @@
 import os
-
+from profile_url import *
+from getting_bio import *
 
 # this is the main that first gathers the profile url
 # and then runs the bio gathering process
@@ -20,13 +21,12 @@ meh = os.path.isfile("./Sample.json")
 
 if meh != True:
     print("Collecting Profile Url")
-    import profile_url
-
+    profile()
     print("Bio Collection Starting")
-    import getting_bio
+    bio()
 else:
     print("Bio Collection Starting")
-    import getting_bio
+    bio()
 
 # now the json file will be updated (per run) and you can use that file get our bios.
 ## NOTE -#########################
