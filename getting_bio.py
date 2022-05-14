@@ -1,3 +1,4 @@
+from ast import Try
 import json
 import time
 import random
@@ -34,19 +35,27 @@ def bio():
     def bio_collector(url):
         try:
             driver.get(url)
-            try:
-                bio = driver.find_element_by_xpath(
-                    '//*[@id="m-timeline-cover-section"]/div[2]/div[2]'
-                ).text
-            except:
-                bio = "Bio Nai"
+            if bool(
+                driver.find_element_by_xpath(
+                    """//h2[contains(text(),"You Can't Use This Feature Right Now")]"""
+                )
+            ):
+                print("You are blocked. Try later and increase the delay")
+                return "blocked"
+            else:
+                try:
+                    bio = driver.find_element_by_xpath(
+                        '//*[@id="m-timeline-cover-section"]/div[2]/div[2]'
+                    ).text
+                except:
+                    bio = "Bio Nai"
         except:
             print("Bio Extracting Failed", url)
             bio = None
         ##########################
         #  to make the code run faster change these value
         # example (0,19)/ (10,15)
-        wait = random.randint(5, 10)
+        wait = random.randint(15, 25)
         print(f" Waiting for {wait} seconds -----")
         time.sleep(wait)
         return bio
@@ -57,7 +66,11 @@ def bio():
             print(
                 f' Bio collected of {i["index"]}: {i["name"]} ...',
             )
-            i["bio"] = str(bio_collector(i["url_i"]))
+            data = bio_collector(i["url_i"])
+            if data == "blocked":
+                break
+            else:
+                i["bio"] = str(data)
 
         else:
             print(f'{i["name"]} - bio done')
