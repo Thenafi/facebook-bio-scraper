@@ -18,8 +18,8 @@ First create _credentials.json_ file and add your Facebook Credentials in it lik
 
 ```
 {
-"username":  "username",
-"pass":  "password"
+"username":  "-",
+"pass":  "-"
 }
 ```
 
