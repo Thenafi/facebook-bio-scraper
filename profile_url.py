@@ -6,9 +6,12 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 # ekahne just profile e login kore sobar friends page the sobar name ar url collect  kore
 # ekta jason database type banailam
+# ind mane index for our friends
+ind = 0
 
 
 def profile():
+    global ind
     # at first lets login
     # need these bugichugi & dont care about this
     # if you really wanna know google it
@@ -30,8 +33,6 @@ def profile():
     password.send_keys(data["pass"])
     login = driver.find_element_by_xpath("//input [@name='login']").click()
 
-    # ind mane index for our friends
-    ind = 0
     all_friends = []  # sob data ene dhukamu
 
     # ebar amora profile e dhukbo and tar por friends er list e jabo
@@ -65,7 +66,7 @@ def profile():
             name_of_friend = i.text
             url = i.get_attribute("href")
             friend = {"index": ind, "name": name_of_friend, "url_i": url, "bio": None}
-            ind = ind + 1
+            ind += 1
             all_friends.append(friend)
 
     # looping through all the friends
