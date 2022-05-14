@@ -45,7 +45,7 @@ Change the random integer range at line 37 of getting_bio.py file.
 
     wait  =  random.randint(20,  40)
 
-It's the delay between each profile visit. Visiting profile like a bot (too fast) causes the block.
+It's the delay between each profile visit. Visiting profile like a bot (too fast) causes the block. Use between 10-20
 
 ---
 
