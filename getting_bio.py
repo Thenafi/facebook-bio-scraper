@@ -26,11 +26,14 @@ def bio():
 
     # login complete
 
-    with open("Sample.json", "r", encoding="utf-8") as read_it:
+    with open("output.json", "r", encoding="utf-8") as read_it:
         data = json.load(read_it)
 
     # profile theke bio anar function
-    # NOTE to make the code run faster change this value
+
+    ##########################
+    #  to make the code run faster change these value
+    # example (0,19)/ (10,15)
     wait = random.randint(20, 40)
 
     def bio_collector(url):
@@ -60,11 +63,12 @@ def bio():
         else:
             print(f'{i["name"]} - bio done')
         # updation of database
-        a_file = open("Sample.json", "w", encoding="utf-8")
+        a_file = open("output.json", "w", encoding="utf-8")
         json.dump(data, a_file)
         a_file.close()
 
     driver.quit()
 
-if __name__== "__main__":
+
+if __name__ == "__main__":
     print("Run main.py file")

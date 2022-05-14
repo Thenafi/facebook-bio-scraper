@@ -82,7 +82,7 @@ def profile():
 
     driver.quit()
 
-    with open("Sample.json", "w", encoding="utf-8") as p:
+    with open("output.json", "w", encoding="utf-8") as p:
         json.dump(all_friends, p)
 
     # btw there is lotof space for refinig and refactoring . go on if you wish do it
