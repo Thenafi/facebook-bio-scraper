@@ -9,25 +9,27 @@ from getting_bio import *
 # to contol it change the timer(range) in getting_bio  line37 (wait variable)
 
 
-#  Sample.json file is the main output or databse..  where all your data will be stored
+#  output.json file is the main output or databse..  where all your data will be stored
 # after running the programe use the
 # updated file and convert it to our needs
 #  if there is no credentials.json file create one like this https://f000.backblazeb2.com/file/ShareX2022/ShareX/Code_kCSU7eE5BC.png
 #  it holds your password and id
 
 
-# checking if you have the Sample.json file.. if not  import profile will run and create the json file
-meh = os.path.isfile("./Sample.json")
-
-if meh != True:
-    print("Collecting Profile Url")
-    profile()
-    print("Bio Collection Starting")
-    bio()
+# checking if you have the output.json file.. if not  import profile will run and create the json file
+meh = os.path.isfile("./output.json")
+crd = os.path.isfile("./credentials.json")
+if crd:
+    if meh != True:
+        print("Collecting Profile Url")
+        profile()
+        print("Bio Collection Starting")
+        bio()
+    else:
+        print("Bio Collection Starting")
+        bio()
 else:
-    print("Bio Collection Starting")
-    bio()
-
+    print("add credentials.json ")
 # now the json file will be updated (per run) and you can use that file get our bios.
 ## NOTE -#########################
 # you can stop it and rerun as u wish. and collect few friends from the top
