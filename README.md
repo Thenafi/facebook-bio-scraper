@@ -55,6 +55,6 @@ It's the delay between each profile visit. Visiting profile like a bot (too fast
 - You should have chrome in your machine
 - Built on windows and tested on windows
 - _This is a beginner level code, and this might need some refactoring. But it works._
-- there might be some unrecognizable comments for non-bangali codes
+- there might be some unrecognizable comments for non-bengali coders
 - there's zero to none error handling.
 - add issues if you find any
