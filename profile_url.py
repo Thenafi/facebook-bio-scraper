@@ -37,7 +37,9 @@ def profile():
 
     # ebar amora profile e dhukbo and tar por friends er list e jabo
     driver.get("https://mbasic.facebook.com/profile.php")
-    friends_list = driver.find_element_by_link_text("Friends").click()
+    friends_list = driver.find_element_by_xpath(
+        '//div[3]//a[contains(text(),"Friends")]'
+    ).click()
     print(driver.current_url)
     # uprer print ta just for testing purpose
 

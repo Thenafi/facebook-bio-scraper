@@ -35,14 +35,13 @@ def bio():
     def bio_collector(url):
         try:
             driver.get(url)
-            if bool(
+            try:
                 driver.find_element_by_xpath(
                     """//h2[contains(text(),"You Can't Use This Feature Right Now")]"""
                 )
-            ):
                 print("You are blocked. Try later and increase the delay")
                 return "blocked"
-            else:
+            except:
                 try:
                     bio = driver.find_element_by_xpath(
                         '//*[@id="m-timeline-cover-section"]/div[2]/div[2]'
@@ -66,11 +65,11 @@ def bio():
             print(
                 f' Bio collected of {i["index"]}: {i["name"]} ...',
             )
-            data = bio_collector(i["url_i"])
-            if data == "blocked":
+            info = bio_collector(i["url_i"])
+            if info == "blocked":
                 break
             else:
-                i["bio"] = str(data)
+                i["bio"] = str(info)
 
         else:
             print(f'{i["name"]} - bio done')
