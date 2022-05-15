@@ -75,9 +75,12 @@ def bio():
         else:
             print(f'{i["name"]} - bio done')
         # updation of database
-        a_file = open("output.json", "w", encoding="utf-8")
-        json.dump(data, a_file)
-        a_file.close()
+        if data is not None:
+            a_file = open("output.json", "w", encoding="utf-8")
+            json.dump(data, a_file)
+            a_file.close()
+        else:
+            pass
 
     driver.quit()
 
