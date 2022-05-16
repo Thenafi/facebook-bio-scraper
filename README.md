@@ -1,7 +1,7 @@
 ## **Facebook Scraper🕷**
 
 It's a selenium-based script which scrapes/collects all the bios of your Facebook friends👼.
-Frist it collects the URL and visit those pages one by one to get the bio.
+Frist it collects the URL and visit those pages/profiles one by one to get the bio.
 
 It saves all the data in an output.json file and acts as a database. There is a converter file to convert the data into excel or csv format
 
@@ -23,9 +23,9 @@ First create _credentials.json_ file and add your Facebook Credentials in it lik
 }
 ```
 
-Recommended to use virtual environment. You can read [here.](https://dev.to/ngazetungue/python-script-in-virtual-environment-beginners-guide-h6d)
+Recommended to use virtual environment. If you dont know about it you can read [here.](https://dev.to/ngazetungue/python-script-in-virtual-environment-beginners-guide-h6d)
 
-Activate your virtual environment or just run these.
+Activate your virtual environment or just run following commnads.
 
 First install the required packages
 
@@ -54,7 +54,7 @@ It's the delay between each profile visit. Visiting profile like a bot (too fast
 - You should have python installed
 - You should have chrome in your machine
 - Built on windows and tested on windows
-- _This is a beginner level code, and this might need some refactoring. But it works._
-- there might be some unrecognizable comments for non-bengali coders
 - there's zero to none error handling.
 - add issues if you find any
+- _This is a beginner level code, and this might need some refactoring. But it works._
+- there might be some unrecognizable comments for non-bengali coders
